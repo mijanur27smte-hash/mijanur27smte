@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MD Mijanur Rahman — Science &amp; Math Education</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --board:#1b3a2e;
+    --board-2:#234a3a;
+    --paper:#f4efe2;
+    --ink:#22291f;
+    --chalk:#f1ede2;
+    --amber:#e0a33d;
+    --amber-dim:#c98f2e;
+    --line: rgba(241,237,226,0.16);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Karla',sans-serif;
+    line-height:1.55;
+  }
+  h1,h2,h3,.brand{font-family:'Zilla Slab',serif}
+  a{color:inherit}
+  .wrap{display:flex;min-height:100vh}
+
+  /* Sidebar */
+  .sidebar{
+    background:var(--board);
+    color:var(--chalk);
+    width:290px;
+    flex:0 0 290px;
+    padding:2.4rem 1.8rem;
+    position:sticky;
+    top:0;
+    height:100vh;
+    overflow-y:auto;
+  }
+  .avatar{
+    width:84px;height:84px;border-radius:50%;
+    background:var(--amber);
+    color:var(--board);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Zilla Slab',serif;font-weight:700;font-size:1.6rem;
+    margin-bottom:1.1rem;
+  }
+  .sidebar h1{font-size:1.5rem;margin:0 0 .15rem;color:var(--chalk);line-height:1.2}
+  .role{color:var(--amber);font-size:.95rem;margin:0 0 1.4rem}
+  nav.side-nav{margin:1.6rem 0;border-top:1px solid var(--line);padding-top:1.2rem}
+  nav.side-nav a{
+    display:block;text-decoration:none;color:var(--chalk);
+    font-size:.92rem;padding:.4rem 0;opacity:.8;
+    border-left:2px solid transparent;padding-left:.7rem;
+    transition:opacity .15s, border-color .15s;
+  }
+  nav.side-nav a:hover{opacity:1;border-color:var(--amber)}
+  .contact{border-top:1px solid var(--line);padding-top:1.2rem;font-size:.88rem}
+  .contact div{margin-bottom:.5rem;opacity:.9}
+  .contact a{text-decoration:none;border-bottom:1px dotted var(--line)}
+
+  /* Main */
+  main{flex:1;padding:3rem clamp(1.5rem,5vw,4.5rem);max-width:760px}
+  section{margin-bottom:3.2rem;scroll-margin-top:2rem}
+  .eyebrow{color:var(--amber-dim);font-size:.82rem;letter-spacing:.02em;margin:0 0 .3rem}
+  h2{font-size:1.55rem;margin:0 0 1.1rem;border-bottom:2px solid var(--board);display:inline-block;padding-bottom:.2rem}
+  .lede{font-size:1.08rem;max-width:62ch}
+
+  .item{display:flex;gap:1.2rem;padding:1rem 0;border-bottom:1px solid rgba(27,58,46,0.12)}
+  .item:last-child{border-bottom:none}
+  .item .when{flex:0 0 118px;color:var(--amber-dim);font-weight:700;font-size:.88rem;padding-top:.15rem}
+  .item h3{margin:0 0 .2rem;font-size:1.08rem}
+  .item p{margin:0;font-size:.95rem;opacity:.85}
+
+  .tags{display:flex;flex-wrap:wrap;gap:.55rem}
+  .tags span{
+    background:var(--board);color:var(--chalk);
+    padding:.4rem .85rem;border-radius:2px;font-size:.86rem;
+  }
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+  .card{border:1px solid rgba(27,58,46,0.18);padding:1.1rem 1.2rem}
+  .card h3{margin:0 0 .2rem;font-size:1rem}
+  .card p{margin:.1rem 0;font-size:.9rem;opacity:.85}
+
+  footer{padding:1.6rem clamp(1.5rem,5vw,4.5rem);color:var(--ink);opacity:.6;font-size:.85rem}
+
+  .nav-toggle{display:none}
+  @media (max-width:760px){
+    .wrap{flex-direction:column}
+    .sidebar{position:relative;width:100%;height:auto;flex:none}
+    main{padding:2rem 1.3rem}
+    .grid2{grid-template-columns:1fr}
+    .item{flex-direction:column;gap:.2rem}
+    .item .when{flex:none}
+  }
+  :focus-visible{outline:2px solid var(--amber-dim);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <aside class="sidebar">
+    <div class="avatar">MR</div>
+    <h1>MD Mijanur Rahman</h1>
+    <p class="role">Science, Math &amp; Technology Educator</p>
+    <nav class="side-nav">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#activities">Activities</a>
+      <a href="#references">References</a>
+    </nav>
+    <div class="contact">
+      <div>📍 Sheorapara, Dhaka</div>
+      <div>✉️ <a href="mailto:mijanur27smte@gmail.com">mijanur27smte@gmail.com</a></div>
+      <div>📞 <a href="tel:+8801784097120">+880 1784-097120</a></div>
+    </div>
+  </aside>
+
+  <main>
+    <section id="about">
+      <p class="eyebrow">About</p>
+      <h2>Teaching science by making it makeable</h2>
+      <p class="lede">I'm a graduate student at the Institute of Education and Research, University of Dhaka, studying Science, Mathematics &amp; Technology Education (SMTE) with a focus on curriculum theory and research methods. My path runs through a classroom, a field survey clipboard, and a stack of research papers: I've taught secondary science, collected nationwide primary-education data as a UNICEF-funded enumerator, and presented at the International Conference on STEM Education. I care about the gap between what curricula intend and what actually happens in a classroom — and about closing it with evidence, not guesswork.</p>
+    </section>
+
+    <section id="education">
+      <p class="eyebrow">Education</p>
+      <h2>Education</h2>
+      <div class="item">
+        <div class="when">Ongoing</div>
+        <div><h3>M.S. in Science, Mathematics &amp; Technology Education</h3><p>Institute of Education and Research, University of Dhaka</p></div>
+      </div>
+      <div class="item">
+        <div class="when">Completed</div>
+        <div><h3>B.Ed in Science Education</h3><p>Institute of Education and Research, University of Dhaka · CGPA 3.62</p></div>
+      </div>
+      <div class="item">
+        <div class="when">2020</div>
+        <div><h3>HSC, Science</h3><p>Dinajpur Adarsha College · GPA 4.33</p></div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <p class="eyebrow">Experience</p>
+      <h2>Experience</h2>
+      <div class="item">
+        <div class="when">2024 – 2025</div>
+        <div><h3>Assistant Science Teacher</h3><p>Nilkhet High School, Dhaka</p></div>
+      </div>
+      <div class="item">
+        <div class="when">2024 – 2025</div>
+        <div><h3>Data Enumerator, DPE Project</h3><p>Directorate of Primary Education, UNICEF-funded field survey</p></div>
+      </div>
+      <div class="item">
+        <div class="when">Jun 2025</div>
+        <div><h3>Conference Participant</h3><p>International Conference on STEM Education: Innovation, Integration &amp; Impact — IER, University of Dhaka</p></div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <p class="eyebrow">Skills</p>
+      <h2>Skills</h2>
+      <div class="tags">
+        <span>Project Management</span>
+        <span>Effective Communication</span>
+        <span>Data Collection &amp; Analysis</span>
+        <span>Technology &amp; Innovation in Education</span>
+        <span>Leadership</span>
+        <span>MS Office</span>
+        <span>Bangla &amp; English</span>
+      </div>
+    </section>
+
+    <section id="activities">
+      <p class="eyebrow">Beyond the classroom</p>
+      <h2>Activities</h2>
+      <div class="item">
+        <div class="when">2022 – 2026</div>
+        <div><h3>IER Cricket Team — All-Rounder</h3></div>
+      </div>
+      <div class="item">
+        <div class="when">2025 – 2026</div>
+        <div><h3>Bijoy Ekattor Hall Annual Sports</h3><p>Shot Put — 2nd place (2026) · Discus Throw — 3rd place (2026, 2025)</p></div>
+      </div>
+      <div class="item">
+        <div class="when">2022 – 2025</div>
+        <div><h3>Bijoy Ekattor Hall Debate Club — Member</h3></div>
+      </div>
+      <div class="item">
+        <div class="when">2014 – 2017</div>
+        <div><h3>Scouting</h3><p>Pirgonj DN College (2014) · Thakurgaon Zilla School (2017)</p></div>
+      </div>
+    </section>
+
+    <section id="references">
+      <p class="eyebrow">References</p>
+      <h2>References</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Dr. S M Hafizur Rahman</h3>
+          <p>Professor, IER, University of Dhaka</p>
+          <p><a href="mailto:hafiz.rahman@du.ac.bd">hafiz.rahman@du.ac.bd</a></p>
+        </div>
+        <div class="card">
+          <h3>Dr. Rezina Ahmed</h3>
+          <p>Associate Professor, IER, University of Dhaka</p>
+          <p><a href="mailto:rezinanur@gmail.com">rezinanur@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<footer>© 2026 MD Mijanur Rahman</footer>
+</body>
+</html>
