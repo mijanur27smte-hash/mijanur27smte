@@ -45,11 +45,10 @@
   }
   .avatar{
     width:84px;height:84px;border-radius:50%;
-    background:var(--amber);
-    color:var(--board);
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Zilla Slab',serif;font-weight:700;font-size:1.6rem;
+    object-fit:cover;
+    border:2px solid var(--amber);
     margin-bottom:1.1rem;
+}
   }
   .sidebar h1{font-size:1.5rem;margin:0 0 .15rem;color:var(--chalk);line-height:1.2}
   .role{color:var(--amber);font-size:.95rem;margin:0 0 1.4rem}
@@ -106,7 +105,7 @@
 <body>
 <div class="wrap">
   <aside class="sidebar">
-    <div class="avatar">MR</div>
+   <img class="avatar" src="photo.jpg" alt="MD Mijanur Rahman"> 
     <h1>MD Mijanur Rahman</h1>
     <p class="role">Science, Math &amp; Technology Educator</p>
     <nav class="side-nav">
@@ -120,7 +119,6 @@
     <div class="contact">
       <div>📍 Sheorapara, Dhaka</div>
       <div>✉️ <a href="mailto:mijanur27smte@gmail.com">mijanur27smte@gmail.com</a></div>
-      <div>📞 <a href="tel:+8801784097120">+880 1784-097120</a></div>
     </div>
   </aside>
 
