@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MD Mijanur Rahman — Science &amp; Math Education</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+
 <style>
   :root{
     --board:#1b3a2e;
@@ -17,18 +18,28 @@
     --amber:#e0a33d;
     --amber-dim:#c98f2e;
     --line: rgba(241,237,226,0.16);
+    --page-max: 1180px;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
     margin:0;
-    background:var(--paper);
+    background:var(--board);
     color:var(--ink);
     font-family:'Karla',sans-serif;
     line-height:1.55;
   }
   h1,h2,h3,.brand{font-family:'Zilla Slab',serif}
   a{color:inherit}
+
+  /* Center the whole layout as one card on the page */
+  .page{
+    max-width:var(--page-max);
+    margin:0 auto;
+    min-height:100vh;
+    background:var(--paper);
+    box-shadow:0 0 60px rgba(0,0,0,.25);
+  }
   .wrap{display:flex;min-height:100vh}
 
   /* Sidebar */
@@ -42,30 +53,36 @@
     top:0;
     height:100vh;
     overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
   }
   .avatar{
-    width:130px;height:130px;border-radius:50%;
+    width:130px;
+    height:130px;
+    border-radius:10px;           /* square with soft corners, not a circle */
     object-fit:cover;
     border:2px solid var(--amber);
     margin-bottom:1.1rem;
-}
   }
   .sidebar h1{font-size:1.5rem;margin:0 0 .15rem;color:var(--chalk);line-height:1.2}
   .role{color:var(--amber);font-size:.95rem;margin:0 0 1.4rem}
-  nav.side-nav{margin:1.6rem 0;border-top:1px solid var(--line);padding-top:1.2rem}
+  nav.side-nav{margin:1.6rem 0;border-top:1px solid var(--line);padding-top:1.2rem;width:100%}
   nav.side-nav a{
     display:block;text-decoration:none;color:var(--chalk);
     font-size:.92rem;padding:.4rem 0;opacity:.8;
     border-left:2px solid transparent;padding-left:.7rem;
+    text-align:left;
     transition:opacity .15s, border-color .15s;
   }
   nav.side-nav a:hover{opacity:1;border-color:var(--amber)}
-  .contact{border-top:1px solid var(--line);padding-top:1.2rem;font-size:.88rem}
+  .contact{border-top:1px solid var(--line);padding-top:1.2rem;font-size:.88rem;width:100%;text-align:left}
   .contact div{margin-bottom:.5rem;opacity:.9}
   .contact a{text-decoration:none;border-bottom:1px dotted var(--line)}
 
   /* Main */
-  main{flex:1;padding:3rem clamp(1.5rem,5vw,4.5rem);max-width:760px}
+  main{flex:1;padding:3rem clamp(1.5rem,5vw,4.5rem);max-width:760px;margin:0 auto}
   section{margin-bottom:3.2rem;scroll-margin-top:2rem}
   .eyebrow{color:var(--amber-dim);font-size:.82rem;letter-spacing:.02em;margin:0 0 .3rem}
   h2{font-size:1.55rem;margin:0 0 1.1rem;border-bottom:2px solid var(--board);display:inline-block;padding-bottom:.2rem}
@@ -88,9 +105,8 @@
   .card h3{margin:0 0 .2rem;font-size:1rem}
   .card p{margin:.1rem 0;font-size:.9rem;opacity:.85}
 
-  footer{padding:1.6rem clamp(1.5rem,5vw,4.5rem);color:var(--ink);opacity:.6;font-size:.85rem}
+  footer{padding:1.6rem clamp(1.5rem,5vw,4.5rem);color:var(--ink);opacity:.6;font-size:.85rem;text-align:center;background:var(--paper)}
 
-  .nav-toggle{display:none}
   @media (max-width:760px){
     .wrap{flex-direction:column}
     .sidebar{position:relative;width:100%;height:auto;flex:none}
@@ -101,11 +117,13 @@
   }
   :focus-visible{outline:2px solid var(--amber-dim);outline-offset:2px}
 </style>
+
 </head>
 <body>
+<div class="page">
 <div class="wrap">
   <aside class="sidebar">
-   <img class="avatar" src="mijanurpicture.jpeg" alt="MD Mijanur Rahman"> 
+    <img class="avatar" src="mijanurpicture.jpeg" alt="MD Mijanur Rahman">
     <h1>MD Mijanur Rahman</h1>
     <p class="role">Science, Math &amp; Technology Educator</p>
     <nav class="side-nav">
@@ -115,7 +133,7 @@
       <a href="#skills">Skills</a>
       <a href="#activities">Activities</a>
       <a href="#contact">Contact</a>
-     </nav>
+    </nav>
     <div class="contact">
       <div>📍 Sheorapara, Dhaka</div>
       <div>✉️ <a href="mailto:mijanur27smte@gmail.com">mijanur27smte@gmail.com</a></div>
@@ -124,12 +142,12 @@
 
   <main>
     <section id="about">
-         <h2>About</h2>
-       <p class="lede">I'm a graduate student at the Institute of Education and Research, University of Dhaka, studying Science, Mathematics &amp; Technology Education (SMTE) with a focus on curriculum theory and research methods. My path runs through a classroom, a field survey clipboard, and a stack of research papers: I've taught secondary science, collected nationwide primary-education data as a UNICEF-funded enumerator, and presented at the International Conference on STEM Education. I care about the gap between what curricula intend and what actually happens in a classroom — and about closing it with evidence, not guesswork.</p>
+      <h2>About</h2>
+      <p class="lede">I'm a graduate student at the Institute of Education and Research, University of Dhaka, studying Science, Mathematics &amp; Technology Education (SMTE) with a focus on curriculum theory and research methods. My path runs through a classroom, a field survey clipboard, and a stack of research papers: I've taught secondary science, collected nationwide primary-education data as a UNICEF-funded enumerator, and presented at the International Conference on STEM Education. I care about the gap between what curricula intend and what actually happens in a classroom — and about closing it with evidence, not guesswork.</p>
     </section>
 
     <section id="education">
-       <h2>Education</h2>
+      <h2>Education</h2>
       <div class="item">
         <div class="when">Ongoing</div>
         <div><h3>M.S. in Science, Mathematics &amp; Technology Education</h3><p>Institute of Education and Research, University of Dhaka</p></div>
@@ -145,7 +163,7 @@
     </section>
 
     <section id="experience">
-       <h2>Experience</h2>
+      <h2>Experience</h2>
       <div class="item">
         <div class="when">2024 – 2025</div>
         <div><h3>Assistant Science Teacher</h3><p>Nilkhet High School, Dhaka</p></div>
@@ -161,7 +179,7 @@
     </section>
 
     <section id="skills">
-       <h2>Skills</h2>
+      <h2>Skills</h2>
       <div class="tags">
         <span>Project Management</span>
         <span>Effective Communication</span>
@@ -174,7 +192,7 @@
     </section>
 
     <section id="activities">
-       <h2>Activities</h2>
+      <h2>Activities</h2>
       <div class="item">
         <div class="when">2022 – 2026</div>
         <div><h3>IER Cricket Team — All-Rounder</h3></div>
@@ -192,16 +210,18 @@
         <div><h3>Scouting</h3><p>Pirgonj DN College (2014) · Thakurgaon Zilla School (2017)</p></div>
       </div>
     </section>
-   <section id="contact">
-     <h2>Get in touch</h2>
-   <p class="lede">Have a question about my research or teaching work, or want to collaborate? I'd love to hear from you.</p>
-  <div class="tags">
-    <span><a href="mailto:mijanur27smte@gmail.com" style="color:inherit;text-decoration:none">✉️ mijanur27smte@gmail.com</a></span>
-    <span>📍 Sheorapara, Dhaka</span>
-  </div>
-</section>
+
+    <section id="contact">
+      <h2>Get in touch</h2>
+      <p class="lede">Have a question about my research or teaching work, or want to collaborate? I'd love to hear from you.</p>
+      <div class="tags">
+        <span><a href="mailto:mijanur27smte@gmail.com" style="color:inherit;text-decoration:none">✉️ mijanur27smte@gmail.com</a></span>
+        <span>📍 Sheorapara, Dhaka</span>
+      </div>
+    </section>
   </main>
 </div>
 <footer>© 2026 MD Mijanur Rahman</footer>
+</div>
 </body>
 </html>
